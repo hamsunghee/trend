@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6-헤더네비게이션(반응형)</title>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style6.css">
+  <title>Document</title>
+  <style>
+#m0{
+    width:100%;
+    height: 150px;
+    top:300%;
+    transform: translateY(-300%);
+}
+#m0 h2{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size:50px;
+    font-weight:800;
+    color:#333;
+    text-align:center;  
+    line-height: 130px;
+}
+
+#footer {border-top: 1px solid #dbdbdb;}
+.footer {text-align: center; padding: 30px 50px; }
+.footer li {position: relative; display: inline; padding: 0 7px 0 10px; white-space: nowrap;}
+.footer li:before {content: ''; width: 1px; height: 12px; background-color: #dbdbdb; position: absolute; left: 0; top: 2px;}
+.footer li:first-child:before {width: 0;}
+.footer address {padding-top: 15px;}
+
+  </style>
+  </head>
+  <body>
+
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="#none"><img src="image/logo.png" alt=""></a> 
+      </div>
+      <ul class="gnb">
+        <li><a href="#">BIG TYPO</a></li>
+        <li><a href="#">IMMERSIVE 3D</a></li>
+        <li><a href="#">GRADIENTS</a></li>
+        <li><a href="#">SCROLLYTELLING</a></li>
+      </ul>
+      <div class="trigger">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+    </nav>
+  </header>
+  <main>
+    <img src="image/main3.gif" alt="">
+    <div id="m0"> 
+      <div class="m0_in">
+          <h2 id="typing1">Hello! WebDesign&amp;Trends 2023🙌
+            &nbsp; </h2>
+      </div>
+  </div>
+  </main>
+
+  <section>
+    <div class="post">
+			<div class="image">
+				<img src="image/b1.gif">
+			</div>
+			<div class="desc">
+				<h2>BIG TYPO</h2>
+				<p>
+					Huge, interactive typography is hitting the web. It also interacts with subtle animations.
+				</p>
+			</div>
+		</div>
+    <div class="post">
+			<div class="image">
+				<img src="image/3D.gif">
+			</div>
+			<div class="desc">
+				<h2>IMMERSIVE 3D</h2>
+				<p>
+					3D is used by various companies and increases immersion through advances in VR technology.
+				</p>
+			</div>
+		</div>
+    <div class="post">
+			<div class="image">
+				<img src="image/그라디언트.gif">
+			</div>
+			<div class="desc">
+				<h2>GRADIENTS</h2>
+				<p>
+					This year, gradation caught the eye with its striking liquid or pastel tone
+				</p>
+			</div>
+		</div>
+    <div class="post">
+			<div class="image">
+				<img src="image/스크롤.gif">
+			</div>
+			<div class="desc">
+				<h2>SCROLLYTELLING</h2>
+				<p>
+					Break the stereotyped design and implement the content experience interactively through scrolling.
+				</p>
+			</div>
+		</div>
+  </section>
+  
+  <footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer">
+                <ul>
+                    <li><a href="#">사이트 도움말</a></li>
+                    <li><a href="#">사이트 이용약관</a></li>
+                    <li><a href="#">사이트 운영원칙</a></li>
+                    <li><a href="#"><strong>개인정보취급방침</strong></a></li>
+                    <li><a href="#">부가 서비스</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <address>
+                    Copyright &copy;
+                    <a href="http://webstoryboy.co.kr"><strong>WEB TREND 2023</strong></a>
+                    All Rights Reserved.
+                </address>
+            </div>
+        </div>
+    </div>
+</footer>
+<a href="#" class="btn-top"><i class="fa fa-arrow-up"></i></a>
+
+  <!-- Script Source -->
+	<script src="js/jquery-3.6.3.min.js"></script>
+	<script src="js/script6.js"></script>
+  
+  <script src="js/typeit.min.js"></script>
+  <script>
+    
+      window.instance = new TypeIt("#typing1", {
+          speed: 100
+        })
+          .type("")
+          .pause(500)
+          .delete(4)
+          .pause(500)
+          .type("ring.")
+          .pause(500)
+          .delete()
+          .pause(500)
+          .options({
+            speed: 25
+          })
+          .type("")
+          .go();
+  
+          
+  </script>
+  <script>
+    $(".ban").hover(function(){ 
+      clearInterval(bauto);  
+    }, function(){
+      bauto=setInterval(bannerAuto,4000);
+    });
+  
+  
+    $(window).scroll(function(){
+  
+      let pos = $(window).scrollTop();
+  
+      if(pos>50){
+        $('header, .btn-top').addClass('active');
+      }else{
+        $('header, .btn-top').removeClass('active');
+      }
+  
+    });
+  
+    let oimg=0; 
+    let nimg=0;
+  </script>
+</body>
+</html>
